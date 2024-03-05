@@ -9,4 +9,5 @@ export const routes: Routes = [
 { path: 'login', component: LoginComponent }, 
 { path: 'favorite', component: FavoriteComponent },   
 { path: 'home', component: HomeComponent },
+{ path: 'music-genre', component: MusicGenreComponent },
 { path: 'music-genre/:term', component: MusicGenreComponent },];

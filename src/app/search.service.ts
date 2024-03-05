@@ -12,11 +12,13 @@ export class SearchService {
   
   get searchTerm$(): Observable<string> {
     return this.searchTermSubject.asObservable();
+    
   }
   
 
   setSearchTerm(term: string): void {
     this.searchTermSubject.next(term);
+    console.log(this.searchTerm$)
 
   }
 

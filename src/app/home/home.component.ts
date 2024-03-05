@@ -3,7 +3,7 @@ import { AppComponent } from "../app.component";
 import { Router } from '@angular/router';
 import { NavBarComponent } from "../nav-bar/nav-bar.component";
 import { MusicGenreComponent } from '../music-genre/music-genre.component';
-import { SearchService } from '../search.service';
+
 
 @Component({
     selector: 'app-home',
