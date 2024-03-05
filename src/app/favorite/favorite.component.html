@@ -1,0 +1,27 @@
+<app-nav-bar></app-nav-bar>
+<h2 class="title">Favorite Artists</h2>
+
+ <form (ngSubmit)="addArtist()">
+    <input type="text" placeholder="Artist name" [(ngModel)]="newArtistName" name="newArtistName" required>
+    <input type="text" placeholder="Song title" [(ngModel)]="newSongTitle" name="newSongTitle" required>
+    <input type="number" placeholder="Rating" [(ngModel)]="newRating" name="newRating" min="0" max="5" required>
+    <button type="submit">Add to Favorites</button>
+</form> 
+
+
+
+<p></p>
+
+<div class="card-container">
+  <div class="card" *ngFor="let artist of favoriteArtists; let i = index">
+    <div class="card-header">
+      <h3>{{ artist.name }}</h3>
+      <img [src]="imageUrl" class="header-image" >
+      <button class="btn btn-danger"  (click)="removeArtist(i)">x</button>
+    </div>
+    <div class="card-body">
+      <p>{{ artist.song }}</p>
+      <app-star-rating [rating]="artist.rating" (ratingChange)="updateRating(artist, $event.rating)"></app-star-rating>
+    </div>
+  </div>
+</div>

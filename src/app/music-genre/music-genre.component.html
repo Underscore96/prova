@@ -1,0 +1,23 @@
+<app-nav-bar></app-nav-bar>
+<h1>Hitlist: most played</h1>
+<div class="container">
+ <div class="container-grid" cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <mat-card *ngFor="let artist of filteredData" class="artist-card" cdkDrag>
+        <mat-card-header>
+        <img [src]="artist.cover" mat-card-avatar class="header-image" >
+        <mat-card-title>{{ artist.name }}</mat-card-title>
+        <mat-card-subtitle>{{ artist.genre }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+         <p>Song: {{ artist.song }}</p>
+         <audio #ref src="http://soundbible.com/grab.php?id=1686&type=mp3"></audio>
+         <button class="icon" (click)="ref.play()"> <fa-icon [icon]="faPlayCircle" class="music-icon"></fa-icon> </button>
+         <app-star-rating [rating]="artist.rating" (ratingChange)="updateRating(artist, $event.rating)"></app-star-rating>
+
+
+
+        </mat-card-content>
+        </mat-card>
+    </div> 
+</div>
+

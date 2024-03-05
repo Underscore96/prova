@@ -1,0 +1,110 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 4%;
+}
+
+.header-image {
+    width: 200px;
+    height: 64px;
+    background-size: cover;
+    background-position: center;
+  }
+
+.card {
+    background-color: #f1f1f1; 
+    border-radius: 20px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+    position: relative; 
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+}
+
+.card-header {
+    background-color: #b1abaec5; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 10px;
+    color: white;
+    font-size: 10px;
+    position: relative; 
+}
+.card-body {
+    padding: 20px;
+}
+
+.card-body p {
+    margin: 0;
+}
+
+.btn.btn-danger {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #faf6f5a3;
+    color: rgb(12, 4, 4);
+    border: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.title {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: rgb(229, 225, 225);
+    font-weight: bold;
+    letter-spacing: -4px;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffffff 0%, #f1f1f1 100%); 
+    position: relative;
+    padding: 40px;
+    margin-top: 20px; 
+    border-radius: 20px;
+    box-shadow: 0 7px 0px rgba(0, 4, 0, 0.3);
+}
+
+
+form {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;  
+    justify-content: space-between; 
+    width: 80%; 
+    margin: 0 auto; 
+    margin-bottom: 20px; 
+}
+
+input[type="text"], button[type="submit"] {
+    flex: 1; 
+    margin-right: 10px; 
+}
+
+button[type="submit"] {
+    margin-right: 0;
+    padding: 4px 8px; 
+    background-color: #a2c3a3;
+    color: white;
+    border: none;
+    border-radius: 20px; 
+    cursor: pointer;
+    font-size: 14px; 
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #b1d0b3eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+

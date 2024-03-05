@@ -1,0 +1,10 @@
+fa-icon{
+    color: grey;
+    cursor: pointer;
+
+    &.rated{
+        color: rgb(221, 71, 71);
+    }
+
+    transition: color 0.2s ease-in-out;
+}
